@@ -1,0 +1,17 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Set the base directory
+RewriteBase /
+
+# Redirect all requests to the Flask application
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ cpanel_webhook.py/$1 [QSA,L]
+
+# Set Python handler
+AddHandler cgi-script .py
+Options +ExecCGI
+
+# Set proper MIME types
+AddType text/html .py

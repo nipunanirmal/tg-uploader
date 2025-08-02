@@ -1,0 +1,15 @@
+python-telegram-bot[webhooks]==20.7
+aiohttp
+beautifulsoup4
+hachoir
+numpy
+Pillow
+requests
+python-dotenv
+psycopg2-binary
+yt-dlp
+filesplit
+feedparser
+mediafire-dl
+googledrivedownloader
+flask
